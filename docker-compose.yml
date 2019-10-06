@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  eth-bot:
+    image: node:10-jessie
+    working_dir: /exmo-bot
+    command: ["node", "index.js"]
+    restart: always
+    volumes:
+      - ./:/exmo-bot
+
